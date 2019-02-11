@@ -16,8 +16,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_add_group.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="20" column="19" lean-forward="true" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+            <state relative-caret-position="285">
+              <caret line="19" column="38" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
               <folding>
                 <element signature="e#24#54#0" expanded="true" />
               </folding>
@@ -28,11 +28,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test_add_contact.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1006">
-              <caret line="29" column="18" lean-forward="true" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
-              <folding>
-                <element signature="e#24#54#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="258">
+              <caret line="122" lean-forward="true" selection-start-line="122" selection-end-line="122" />
             </state>
           </provider>
         </entry>
@@ -50,6 +47,7 @@
     <findStrings>
       <find>env</find>
       <find>select</find>
+      <find>name</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -170,34 +168,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_test_add_group_py - 2019.02.11 at 15h 02m 02s.xml">
-      <configuration name="Unittests in test_add_group.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_test_add_group_py - 2019.02.11 at 16h 51m 36s.xml">
-      <configuration name="Unittests in test_add_group.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_test_add_group_py - 2019.02.11 at 17h 34m 38s.xml">
-      <configuration name="Unittests in test_add_group.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_add_contact_py - 2019.02.11 at 17h 40m 53s.xml">
-      <configuration name="Unittests in add_contact.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_test_add_contact_py - 2019.02.11 at 17h 47m 39s.xml">
+    <history-entry file="Unittests_in_test_add_contact_py - 2019.02.11 at 22h 38m 48s.xml">
       <configuration name="Unittests in test_add_contact.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_add_contact_py - 2019.02.11 at 17h 48m 42s.xml">
+    <history-entry file="Unittests_in_test_add_contact_py - 2019.02.11 at 22h 41m 52s.xml">
       <configuration name="Unittests in test_add_contact.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_add_contact_py - 2019.02.11 at 18h 11m 13s.xml">
+    <history-entry file="Unittests_in_test_add_contact_py - 2019.02.11 at 22h 43m 12s.xml">
       <configuration name="Unittests in test_add_contact.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_add_contact_py - 2019.02.11 at 18h 14m 16s.xml">
+    <history-entry file="Unittests_in_test_add_contact_py - 2019.02.11 at 22h 44m 25s.xml">
       <configuration name="Unittests in test_add_contact.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_add_contact_py - 2019.02.11 at 18h 18m 53s.xml">
+    <history-entry file="Unittests_in_test_add_contact_py - 2019.02.11 at 22h 46m 39s.xml">
       <configuration name="Unittests in test_add_contact.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test_add_contact_py - 2019.02.11 at 21h 44m 21s.xml">
+    <history-entry file="Unittests_in_test_add_contact_py - 2019.02.11 at 22h 47m 45s.xml">
+      <configuration name="Unittests in test_add_contact.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_add_contact_py - 2019.02.11 at 22h 49m 12s.xml">
+      <configuration name="Unittests in test_add_contact.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_add_contact_py - 2019.02.11 at 23h 00m 49s.xml">
+      <configuration name="Unittests in test_add_contact.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_add_contact_py - 2019.02.11 at 23h 02m 37s.xml">
+      <configuration name="Unittests in test_add_contact.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_add_contact_py - 2019.02.11 at 23h 03m 20s.xml">
       <configuration name="Unittests in test_add_contact.py" configurationId="tests" />
     </history-entry>
   </component>
@@ -287,8 +285,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test_add_group.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="20" column="19" lean-forward="true" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+        <state relative-caret-position="285">
+          <caret line="19" column="38" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
           <folding>
             <element signature="e#24#54#0" expanded="true" />
           </folding>
@@ -297,11 +295,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test_add_contact.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1006">
-          <caret line="29" column="18" lean-forward="true" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
-          <folding>
-            <element signature="e#24#54#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="258">
+          <caret line="122" lean-forward="true" selection-start-line="122" selection-end-line="122" />
         </state>
       </provider>
     </entry>
