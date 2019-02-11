@@ -5,6 +5,7 @@ from selenium.common.exceptions import NoAlertPresentException
 import unittest
 from group import Group
 
+
 class TestAddGroup(unittest.TestCase):
     def setUp(self):
         self.wd = webdriver.Firefox()
@@ -69,12 +70,12 @@ class TestAddGroup(unittest.TestCase):
         try: self.wd.find_element(by=how, value=what)
         except NoSuchElementException as e: return False
         return True
-    
+
     def is_alert_present(self):
         try: self.wd.switch_to_alert()
         except NoAlertPresentException as e: return False
         return True
-    
+
 
     def tearDown(self):
         self.wd.quit()
