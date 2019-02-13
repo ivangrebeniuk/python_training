@@ -4,7 +4,7 @@ from selenium.webdriver.support.ui import Select
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import NoAlertPresentException
 import unittest
-from Contact import Contact
+from contact import Contact
 
 
 class AddTestContact(unittest.TestCase):
@@ -45,8 +45,6 @@ class AddTestContact(unittest.TestCase):
         wd.find_element_by_name("title").click()
         wd.find_element_by_name("title").clear()
         wd.find_element_by_name("title").send_keys(contact.title)
-        wd.find_element_by_xpath(
-            "(.//*[normalize-space(text()) and normalize-space(.)='Title:'])[1]/following::label[1]").click()
         wd.find_element_by_name("company").click()
         wd.find_element_by_name("company").clear()
         wd.find_element_by_name("company").send_keys(contact.company)
@@ -102,8 +100,7 @@ class AddTestContact(unittest.TestCase):
         wd.find_element_by_name("notes").clear()
         wd.find_element_by_name("notes").send_keys(contact.note)
         # submit creation of contact
-        wd.find_element_by_xpath(
-            "(.//*[normalize-space(text()) and normalize-space(.)='Notes:'])[1]/following::input[1]").click()
+        wd.find_element_by_xpath("(//input[@name='submit'])[2]").click()
 
     def logout(self, wd):
             # log out
