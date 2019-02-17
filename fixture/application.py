@@ -1,7 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.support.ui import Select
-from fixture.Session import SessionHelper
-from fixture.group import GroupHelper
+from fixture.session import SessionHelper
+from fixture.group import Grouphelper
 
 
 class Application:
@@ -10,7 +10,7 @@ class Application:
         self.wd = webdriver.Firefox()
         self.wd.implicitly_wait(30)
         self.session = SessionHelper(self)
-        self.group = GroupHelper(self)
+        self.group = Grouphelper(self)
 
     def open_home_page(self,):
         wd = self.wd
@@ -100,4 +100,3 @@ class Application:
 
     def destroy(self):
         self.wd.quit()
-

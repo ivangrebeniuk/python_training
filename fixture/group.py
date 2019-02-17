@@ -1,6 +1,7 @@
 
 
-class GroupHelper:
+class Grouphelper:
+
     def __init__(self, app):
         self.app = app
 
@@ -8,9 +9,9 @@ class GroupHelper:
         wd = self.app.wd
         wd.find_element_by_link_text("groups").click()
 
-    def create(self, group):
+    def create_group(self, group):
         wd = self.app.wd
-        self.app.open_groups_page()
+        self.open_groups_page()
         # init group creation
         wd.find_element_by_name("new").click()
         # fill in group fields
@@ -25,9 +26,8 @@ class GroupHelper:
         wd.find_element_by_name("group_footer").send_keys(group.footer)
         # Submit group creation
         wd.find_element_by_name("submit").click()
-        self.app.return_to_groups_page()
+        self.return_to_groups_page()
 
     def return_to_groups_page(self):
         wd = self.app.wd
         wd.find_element_by_link_text("group page").click()
-
