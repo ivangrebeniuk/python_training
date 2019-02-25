@@ -5,6 +5,8 @@ class Grouphelper:
 
     def open_groups_page(self):
         wd = self.app.wd
+        if wd.current_url.endswith("/groups.php") and len(wd.find_elements_by_name("new")) > 0:
+            return
         wd.find_element_by_link_text("groups").click()
 
     def change_field_value(self, field_name, text):
