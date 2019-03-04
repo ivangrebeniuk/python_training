@@ -3,9 +3,9 @@
 
 class Contact:
 
-    def __init__(self, first_name, middle_name, last_name, nickname, title, company, address, home_phone,
-                          mobile_phone, work_phone, fax, email, email2, email3, home_page, b_day, b_month, b_year,
-                          a_day, a_month, a_year, secondary_address, phone2, note, id=None):
+    def __init__(self, first_name=None, middle_name=None, last_name=None, nickname=None, title=None, company=None, address=None, home_phone=None,
+                          mobile_phone=None, work_phone=None, fax=None, email=None, email2=None, email3=None, home_page=None, b_day=None, b_month=None, b_year=None,
+                          a_day=None, a_month=None, a_year=None, secondary_address=None, phone2=None, note=None, id=None):
         self.first_name = first_name
         self.middle_name = middle_name
         self.last_name = last_name
@@ -34,4 +34,7 @@ class Contact:
 
     def __repr__(self):
         return "%s:%s:%s" % (self.id, self.first_name, self.last_name)
+
+    def __eq__(self, other):
+        return self.id == other.id and self.name == other.name
 

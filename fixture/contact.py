@@ -120,7 +120,7 @@ class ContactHelper:
         wd = self.app.wd
         self.app.open_home_page()
         contacts = []
-        for element in wd.find_elements_by_css_selector("td"):
+        for element in wd.find_elements_by_css_selector("tr[name='entry']"):
             cells = element.find_elements_by_tag_name("td")
             first = cells[1].text
             last = cells[2].text
