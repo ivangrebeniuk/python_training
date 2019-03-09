@@ -9,5 +9,5 @@ def test_add_contact(app):
                                         email3="test3@email.com", home_page="https:/google.com", b_day="5", b_month="February", b_year="1984", a_day="8", a_month="October", a_year="1999",
                                         secondary_address="Test secondary address", phone2="55", note="Test note"))
     new_contacts = app.contact.get_contact_list()
-    assert len(old_contacts) + 1 == len(new_contacts)
+    assert len(old_contacts) + 1 == app.contact.count()
 
