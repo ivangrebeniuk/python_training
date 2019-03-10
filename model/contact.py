@@ -4,8 +4,8 @@
 class Contact:
 
     def __init__(self, first_name=None, middle_name=None, last_name=None, nickname=None, title=None, company=None, address=None, home_phone=None,
-                          mobile_phone=None, work_phone=None, fax=None, email=None, email2=None, email3=None, home_page=None, b_day=None, b_month=None, b_year=None,
-                          a_day=None, a_month=None, a_year=None, secondary_address=None, phone2=None, note=None, id=None):
+                 mobile_phone=None, work_phone=None, fax=None, email=None, email2=None, email3=None, home_page=None, b_day=None, b_month=None, b_year=None,
+                 a_day=None, a_month=None, a_year=None, secondary_address=None, phone2=None, note=None, id=None):
         self.first_name = first_name
         self.middle_name = middle_name
         self.last_name = last_name
