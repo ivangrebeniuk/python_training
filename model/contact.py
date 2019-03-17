@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from sys import maxsize
 
 
 class Contact:
@@ -38,3 +39,8 @@ class Contact:
     def __eq__(self, other):
         return self.id == other.id and self.first_name == other.first_name and self.last_name == other.last_name
 
+    def id_or_max(self):
+        if self.id:
+            return int(self.id)
+        else:
+            return maxsize

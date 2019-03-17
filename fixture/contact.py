@@ -99,14 +99,17 @@ class ContactHelper:
 
     def edit_contact_by_index(self, contact, index):
         wd = self.app.wd
-        self.select_contact_by_index(index)
-        # submit editing contact
-        wd.find_element_by_xpath("//img[@alt='Edit']").click()
+        self.submit_editing_contact_by_index(index)
         # update contact data
         self.fill_in_contact_data(contact)
         # submit contact update
         wd.find_element_by_name("update").click()
         self.contact_cache = None
+
+    def submit_editing_contact_by_index(self, index):
+        wd = self.app.wd
+        wd.find_elements_by_xpath("//img[@alt='Edit']")[index].click()
+
 
     def delete_first_contact(self):
         self.delete_contact_by_index(0)
@@ -146,5 +149,23 @@ class ContactHelper:
                 first = cells[1].text
                 last = cells[2].text
                 id = element.find_element_by_name("selected[]").get_attribute("value")
-                self.contact_cache.append(Contact(first_name=first, last_name=last, id=id))
+                all_phones = cells[5].text.splitlines()
+                self.contact_cache.append(Contact(first_name=first, last_name=last, id=id, home_phone=all_phones[0],
+                                                  mobile_phone=all_phones[1], work_phone=all_phones[2], fax=all_phones[3]))
         return list(self.contact_cache)
+
+    def get_contact_info_from_edit_page(self, index):
+        wd = self.app.wd
+        self.edit_contact_by_index(index)
+        first_name = wd.find_element_by_name("firstname").get_attribute("value")
+        last_name = wd.find_element_by_name("lastname").get_attribute("value")
+        id = wd.find_element_by_name("id").get_attribute("value")
+        home_phone = wd.find_element_by_name("home").get_attribute("value")
+        mobile_phone = wd.find_element_by_name("mpbile").get_attribute("value")
+        work_phone = wd.find_element_by_name("work").get_attribute("value")
+        fax = wd.find_element_by_name("fax").get_attribute("value")
+        return Contact(first_name=first_name, last_name=last_name, id=id, home_phone = home_phone, mobile_phone=mobile_phone,
+                       work_phone = work_phone, fax = fax)
+
+
+

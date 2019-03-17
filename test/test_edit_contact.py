@@ -2,8 +2,7 @@ from model.contact import Contact
 from random import randrange
 
 
-
-def test_edit_first_contact(app):
+def test_edit_contact(app):
     app.open_home_page()
     if app.contact.count() == 0:
         app.contact.add_new_contact(Contact(first_name="John", middle_name="Doe", last_name="Doe", nickname="Sponge Bob", title="Mr",
