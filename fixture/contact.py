@@ -1,6 +1,7 @@
 from selenium.webdriver.support.ui import Select
 from model.contact import Contact
 from time import sleep
+import re
 
 
 class ContactHelper:
@@ -110,7 +111,6 @@ class ContactHelper:
         wd = self.app.wd
         wd.find_elements_by_xpath("//img[@alt='Edit']")[index].click()
 
-
     def delete_first_contact(self):
         self.delete_contact_by_index(0)
 
@@ -161,11 +161,33 @@ class ContactHelper:
         last_name = wd.find_element_by_name("lastname").get_attribute("value")
         id = wd.find_element_by_name("id").get_attribute("value")
         home_phone = wd.find_element_by_name("home").get_attribute("value")
-        mobile_phone = wd.find_element_by_name("mpbile").get_attribute("value")
+        mobile_phone = wd.find_element_by_name("mobile").get_attribute("value")
         work_phone = wd.find_element_by_name("work").get_attribute("value")
         fax = wd.find_element_by_name("fax").get_attribute("value")
         return Contact(first_name=first_name, last_name=last_name, id=id, home_phone = home_phone, mobile_phone=mobile_phone,
-                       work_phone = work_phone, fax = fax)
+                       work_phone=work_phone, fax=fax)
+
+    def open_contact_view_by_index(self, index):
+        wd = self.app.wd
+        self.app.open_home_page()
+        row = wd.find_elements_by_name("entry")[index]
+        cell = row.find_elements_by_tag_name("td")[6]
+        cell.find_element_by_tag_name("a").click()
+
+    def get_contact_from_view_page(self, index):
+        wd = self.app.wd
+        self.open_contact_view_by_index(index)
+        text = wd.find_element_by_id("Content").text
+        home_phone = re.search("H: (.*)", text).group(1)
+        mobile_phone = re.search("M: (.*)", text).group(1)
+        work_phone = re.search("W: (.*)", text).group(1)
+        fax = re.search("F: (.*)", text).group(1)
+        return Contact(home_phone=home_phone, mobile_phone=mobile_phone, work_phone=work_phone, fax=fax)
+
+
+
+
+
 
 
 
